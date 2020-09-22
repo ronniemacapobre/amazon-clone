@@ -10,11 +10,19 @@ const AppReducer = (state, action) => {
         basket: [...state.basket, action.payload],
       };
     case 'REMOVE_FROM_BASKET':
-      console.log(action.payload);
+      const index = state.basket.findIndex(
+        (basketItem) => basketItem.id === action.payload
+      );
+
+      let newBasket = [...state.basket];
+
+      if ((index) => 0) {
+        newBasket.splice(index, 1);
+      }
 
       return {
         ...state,
-        basket: state.basket.filter((b) => b.id !== action.payload),
+        basket: newBasket,
       };
     default:
       return state;
