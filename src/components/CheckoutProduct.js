@@ -3,9 +3,9 @@ import React from 'react';
 import { useStateValue } from '../contexts/StateProvider';
 import ProductInfo from './ProductInfo';
 
-import './BasketItem.css';
+import './CheckoutProduct.css';
 
-const BasketItem = ({ id, title, imageUrl, price, rating }) => {
+const CheckoutProduct = ({ id, title, imageUrl, price, rating }) => {
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFrombasket = () => {
@@ -16,9 +16,9 @@ const BasketItem = ({ id, title, imageUrl, price, rating }) => {
   };
 
   return (
-    <div className='basketItem'>
+    <div className='checkoutProduct'>
       <img src={imageUrl} alt='' />
-      <div className='basketItem__info'>
+      <div className='checkoutProduct__info'>
         <ProductInfo title={title} price={price} rating={rating} />
         <button onClick={removeFrombasket}>Remove from basket</button>
       </div>
@@ -26,4 +26,4 @@ const BasketItem = ({ id, title, imageUrl, price, rating }) => {
   );
 };
 
-export default BasketItem;
+export default CheckoutProduct;

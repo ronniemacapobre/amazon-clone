@@ -1,5 +1,6 @@
 export const initialState = {
   basket: [],
+  user: null,
 };
 
 const AppReducer = (state, action) => {
@@ -15,6 +16,11 @@ const AppReducer = (state, action) => {
       return {
         ...state,
         basket: state.basket.filter((b) => b.id !== action.payload),
+      };
+    case 'SET_USER':
+      return {
+        ...state,
+        user: action.payload,
       };
     default:
       return state;
