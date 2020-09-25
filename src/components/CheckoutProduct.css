@@ -1,6 +1,7 @@
 .checkoutProduct {
   display: flex;
-  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .checkoutProduct > img {
@@ -10,8 +11,7 @@
 }
 
 .checkoutProduct__info {
-  display: flex;
-  flex-direction: column;
+  padding-left: 20px;
 }
 
 .checkoutProduct__info > button {
@@ -20,5 +20,10 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
-  width: 150px;
+}
+
+.checkoutProduct__image {
+  object-fit: contain;
+  width: 180px;
+  height: 180px;
 }

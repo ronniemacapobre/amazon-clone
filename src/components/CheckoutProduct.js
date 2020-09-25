@@ -17,7 +17,7 @@ const CheckoutProduct = ({ id, title, imageUrl, price, rating }) => {
 
   return (
     <div className='checkoutProduct'>
-      <img src={imageUrl} alt='' />
+      <img className='checkoutProduct__image' src={imageUrl} alt='' />
       <div className='checkoutProduct__info'>
         <ProductInfo title={title} price={price} rating={rating} />
         <button onClick={removeFrombasket}>Remove from basket</button>
