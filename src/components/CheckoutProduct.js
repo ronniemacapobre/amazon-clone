@@ -5,7 +5,14 @@ import ProductInfo from './ProductInfo';
 
 import './CheckoutProduct.css';
 
-const CheckoutProduct = ({ id, title, imageUrl, price, rating }) => {
+const CheckoutProduct = ({
+  id,
+  title,
+  imageUrl,
+  price,
+  rating,
+  isRemoveHidden,
+}) => {
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFrombasket = () => {
@@ -20,7 +27,9 @@ const CheckoutProduct = ({ id, title, imageUrl, price, rating }) => {
       <img className='checkoutProduct__image' src={imageUrl} alt='' />
       <div className='checkoutProduct__info'>
         <ProductInfo title={title} price={price} rating={rating} />
-        <button onClick={removeFrombasket}>Remove from basket</button>
+        {!isRemoveHidden && (
+          <button onClick={removeFrombasket}>Remove from basket</button>
+        )}
       </div>
     </div>
   );

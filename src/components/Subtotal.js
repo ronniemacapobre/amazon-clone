@@ -1,18 +1,14 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-import { ShoppingBasket } from '@material-ui/icons';
 import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from '../contexts/StateProvider';
+import { getBasketTotal } from '../contexts/AppReducer';
 import './Subtotal.css';
 
 const Subtotal = () => {
+  const history = useHistory();
   const [{ basket }, dispatch] = useStateValue();
-
-  const getBasketTotal = () => {
-    return basket.length === 0
-      ? 0
-      : basket.reduce((acc, item) => acc + item.price, 0);
-  };
 
   return (
     <div className='subtotal'>
@@ -27,12 +23,14 @@ const Subtotal = () => {
           </>
         )}
         decimalScale={2}
-        value={getBasketTotal()}
+        value={getBasketTotal(basket)}
         displayType={'text'}
         thousandSeparator={true}
         prefix={'$'}
       />
-      <button>Proceed to Checkout</button>
+      <button onClick={(e) => history.push('/payment')}>
+        Proceed to Checkout
+      </button>
     </div>
   );
 };
