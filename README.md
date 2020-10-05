@@ -1,5 +1,5 @@
-## Deployed App:
-Hosted via Firebase: [REACT - Amazon Clone](https://clone-92c76.web.app/).
+## Deployed App via Firebase:
+DEMO: [REACT - Amazon Clone](https://clone-92c76.web.app/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
