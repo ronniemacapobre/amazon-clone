@@ -12,6 +12,7 @@ import Checkout from './pages/Checkout';
 import Payment from './pages/Payment';
 import Login from './pages/Login';
 import Orders from './pages/Orders';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -46,20 +47,24 @@ const App = () => {
           <Route path='/orders'>
             <Header />
             <Orders />
+            <Footer />
           </Route>
           <Route path='/checkout'>
             <Header />
             <Checkout />
+            <Footer />
           </Route>
           <Route path='/payment'>
             <Header />
             <Elements stripe={promise}>
               <Payment />
             </Elements>
+            <Footer />
           </Route>
           <Route path='/'>
             <Header />
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </div>

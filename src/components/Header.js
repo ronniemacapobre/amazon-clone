@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <Link to='/'>
+      <Link to='/' name='nav-top'>
         <img
           src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'
           alt=''
@@ -31,7 +31,7 @@ const Header = () => {
         <SearchIcon className='header__searchIcon' />
       </div>
       <div className='header__nav'>
-        <Link to={!user && '/login'}>
+        <Link to={!user ? '/login' : ''}>
           <div className='header__option' onClick={handleAuth}>
             <span className='header__optionLineOne'>Hello {user?.email}</span>
             <span className='header__optionLineTwo'>

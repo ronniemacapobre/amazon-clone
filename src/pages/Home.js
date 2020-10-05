@@ -27,8 +27,6 @@ const Home = () => {
             title='SONY WH-1000XM3 Wireless Noise canceling Stereo Headset(International Version/Seller Warrant) (Black)'
             imageUrl='https://images-na.ssl-images-amazon.com/images/I/51CBen-O-yL._AC_UL200_SR150,200_.jpg'
           />
-        </div>
-        <div className='home__row'>
           <Product
             id={3}
             price={251.95}
@@ -36,6 +34,8 @@ const Home = () => {
             title='Logitech G560 LIGHTSYNC PC Gaming Speakers with Game Driven RGB Lighting'
             imageUrl='https://images-na.ssl-images-amazon.com/images/I/51fBODtSLnL._AC_UL400_SR300,400_.jpg'
           />
+        </div>
+        <div className='home__row'>
           <Product
             id={4}
             rating={2}

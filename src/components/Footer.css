@@ -1,0 +1,47 @@
+.footer {
+  margin-top: 10px;
+}
+.footer__backToTop {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #37475a;
+}
+
+.footer__backToTop:hover {
+  background-color: #485769;
+  cursor: pointer;
+}
+
+.footer__backToTop > span {
+  color: white;
+  font-size: 13px;
+}
+
+.footer_verticalRowContainer {
+  background-color: #232f3e;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_verticalRow {
+  margin-left: 80px;
+}
+
+.footer_verticalRow > h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.footer_verticalRow > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer_verticalRow > ul > li {
+  font-size: 12px;
+  margin: 0 0 5px;
+}
